@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMUIKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="g8J-0A-pfV">
+                                <rect key="frame" x="16" y="127" width="361" height="32"/>
+                                <segments>
+                                    <segment title="ZH"/>
+                                    <segment title="JP"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLt-uH-4TV">
+                                <rect key="frame" x="16" y="243" width="361" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="aXU-VV-cSL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Tab"/>
+                                <connections>
+                                    <action selector="buttonDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gve-46-Ch0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EV-mb-kjb">
+                                <rect key="frame" x="16" y="190" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4EV-mb-kjb" firstAttribute="top" secondItem="g8J-0A-pfV" secondAttribute="bottom" constant="32" id="8L2-fJ-3EB"/>
+                            <constraint firstItem="g8J-0A-pfV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="CDb-4f-Xli"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g8J-0A-pfV" secondAttribute="trailing" constant="16" id="FuY-cC-g2D"/>
+                            <constraint firstItem="g8J-0A-pfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HeM-d5-U2c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4EV-mb-kjb" secondAttribute="trailing" constant="16" id="P03-YL-gaq"/>
+                            <constraint firstItem="BLt-uH-4TV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="acO-H4-xTZ"/>
+                            <constraint firstItem="4EV-mb-kjb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dfY-lL-klM"/>
+                            <constraint firstItem="BLt-uH-4TV" firstAttribute="top" secondItem="4EV-mb-kjb" secondAttribute="bottom" constant="32" id="rFL-VF-vkG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BLt-uH-4TV" secondAttribute="trailing" constant="16" id="yhJ-TG-7Yg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeTabButton" destination="BLt-uH-4TV" id="IAV-Ue-etc"/>
+                        <outlet property="currentDescriptionText" destination="4EV-mb-kjb" id="kwC-Fv-rRy"/>
+                        <outlet property="languageControl" destination="g8J-0A-pfV" id="s4p-Zh-SOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
